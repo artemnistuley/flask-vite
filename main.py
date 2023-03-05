@@ -19,7 +19,6 @@ Vite(app)
 
 @app.route('/src/assets/<path:path>')
 def serve_vite_assets(path):
-    print(path)
     if app.config.get('DEBUG'):
         return send_from_directory('./src/assets/', path)
     else:
